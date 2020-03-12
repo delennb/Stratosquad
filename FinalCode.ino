@@ -6,11 +6,9 @@ int GPSDataBufferIndex = 0;
 char GPSDataBuffer[GPS_DATA_BUFFER_SIZE] = {0x00};
 MPU9250 mpu;
 
-
-SoftwareSerial sdCard(3, 2);
-SoftwareSerial GPS(5, 4);
+SoftwareSerial sdCard(11 ,12);
+SoftwareSerial GPS(8, 9);
 void setup() {
-
   Wire.begin();
   delay(2000);
   mpu.setup();
